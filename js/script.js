@@ -1,4 +1,4 @@
-const apiBase = "classemailbackend-production.up.railway.app"; 
+const apiBase = "https://classemailbackend-production.up.railway.app"; 
 
 // ----------------------------
 // Upload Drag & Drop
