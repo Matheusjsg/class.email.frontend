@@ -1,4 +1,4 @@
-const apiBase = "http://127.0.0.1:8000"; // ajuste se necessário
+const apiBase = "class-email-backend.railway.internal"; 
 
 // ----------------------------
 // Upload Drag & Drop
