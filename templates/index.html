@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificador Inteligente de Emails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="../static/logo01.png" alt="Logo AutoU">
+    <h1>Classificação Inteligente de Emails com IA</h1>
+
+    <div id="dropArea" class="drop-area">
+      <p>Arraste seu email ou PDF aqui ou <span class="clickable">clique para selecionar</span></p>
+      <input type="file" id="emailFile" accept=".txt,.pdf" hidden>
+    </div>
+
+    <p>Ou cole o conteúdo do email abaixo:</p>
+    <textarea id="emailText" class="text-input" placeholder="Cole o texto do email aqui"></textarea>
+    <button id="analyzeBtn" class="primary-btn">Analisar Email</button>
+
+    <div id="resultBox" class="result-box" style="display:none;">
+      <div class="category-display">
+        <span id="resultCategory" class="tag produtivo">PRODUTIVO</span>
+        <span id="resultConfidence" class="confidence">Confiança: 87%</span>
+      </div>
+      <label for="respostaEditada"><strong>Resposta Sugerida (editável):</strong></label>
+      <textarea id="respostaEditada" class="resposta-textarea"></textarea>
+      <button id="copyBtn" class="copy-btn">📋 Copiar Resposta</button>
+      <span id="copyMsg" class="copy-msg">Copiado!</span>
+    </div>
+
+     <div id="feedback" style="display:none; margin-top: 15px;">
+      <p>Deixe seu feedback:</p>
+    <button id="correctBtn">👍 Correto</button>
+    <button id="incorrectBtn">👎 Incorreto</button>
+    </div>
+
+    <div id="historyBox" class="history-box">
+      <h2>Histórico</h2>
+      <div class="stats">
+        <div>Emails Produtivos: <span id="countProd">0</span></div>
+        <div>Emails Improdutivos: <span id="countImp">0</span></div>
+        <div>Confiança Média: <span id="avgConf">0%</span></div>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
